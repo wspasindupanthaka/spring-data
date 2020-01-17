@@ -1,35 +1,22 @@
 package com.pasindu.springdata.controller;
 
 import com.pasindu.springdata.entity.Employee;
-import com.pasindu.springdata.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * @author pasindu
- * @project spring-data
- * @on 2020-01-02
- * @at 1:20 PM
- */
+import java.util.List;
+
 @RequestMapping("/employee")
-@RestController
-public class EmployeeController
+public interface EmployeeController
 {
-
-	@Autowired
-	EmployeeService employeeService;
-
 	@RequestMapping(value = "", method = RequestMethod.POST)
-	public Employee save( @RequestBody Employee employee )
-	{
-		Employee savedEmployee = employeeService.save( employee );
-		return savedEmployee;
-	}
+	public Employee save( @RequestBody Employee employee );
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Employee findById(@PathVariable(value = "id") long id )
-	{
-		Employee findByIdIdEmployee = employeeService.findById( id );
-		return findByIdIdEmployee;
-	}
+	@RequestMapping(value = "/from-id/{id}", method = RequestMethod.GET)
+	public Employee findById( @PathVariable(value = "id") long id );
+
+	@RequestMapping(value = "/from-name/{name}", method = RequestMethod.GET)
+	public List<Employee> findByName( @PathVariable(value = "name") String name );
 }

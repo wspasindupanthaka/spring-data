@@ -1,7 +1,8 @@
 package com.pasindu.springdata.service;
 
 import com.pasindu.springdata.entity.Employee;
-import com.pasindu.springdata.resources.EmployeeNameOnly;
+
+import java.util.List;
 
 /**
  * @author pasindu
@@ -14,7 +15,7 @@ public interface EmployeeService
 {
 	Employee save( Employee employee );
 
-	void findByName( String name );
+	List<Employee> findByName( String name );
 
 	Employee findById( long id );
 }

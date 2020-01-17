@@ -1,7 +1,6 @@
 package com.pasindu.springdata.repository;
 
 import com.pasindu.springdata.entity.Employee;
-import com.pasindu.springdata.resources.EmployeeNameOnly;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

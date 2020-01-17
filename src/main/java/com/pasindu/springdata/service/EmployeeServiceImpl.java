@@ -1,10 +1,12 @@
-package com.pasindu.springdata.service.impl;
+package com.pasindu.springdata.service;
 
 import com.pasindu.springdata.entity.Employee;
 import com.pasindu.springdata.repository.EmployeeRepository;
 import com.pasindu.springdata.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author pasindu
@@ -26,9 +28,9 @@ public class EmployeeServiceImpl implements EmployeeService
 	}
 
 	@Override
-	public void findByName( String name )
+	public List<Employee> findByName( String name )
 	{
-
+		return employeeRepository.findEmployeeByName( name );
 	}
 
 	@Override

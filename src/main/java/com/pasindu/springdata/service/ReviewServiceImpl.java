@@ -1,4 +1,4 @@
-package com.pasindu.springdata.service.impl;
+package com.pasindu.springdata.service;
 
 import com.pasindu.springdata.entity.Employee;
 import com.pasindu.springdata.entity.Review;
