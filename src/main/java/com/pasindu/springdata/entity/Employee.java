@@ -1,5 +1,7 @@
 package com.pasindu.springdata.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,6 +12,7 @@ import java.util.List;
  * @at 6:27 PM
  */
 @Entity
+@JsonIgnoreProperties(value = { "participatingEvents" }, allowSetters = true)
 public class Employee
 {
 	@Id
@@ -28,6 +31,9 @@ public class Employee
 			fetch = FetchType.LAZY
 	)
 	private List<Review> receivedReviews;
+
+	@ManyToMany(mappedBy = "participatingEmployees", fetch = FetchType.LAZY)
+	private List<Event> participatingEvents;
 
 	public Employee()
 	{
@@ -81,6 +87,16 @@ public class Employee
 	public void setReceivedReviews( List<Review> receivedReviews )
 	{
 		this.receivedReviews = receivedReviews;
+	}
+
+	public List<Event> getParticipatingEvents()
+	{
+		return participatingEvents;
+	}
+
+	public void setParticipatingEvents( List<Event> participatingEvents )
+	{
+		this.participatingEvents = participatingEvents;
 	}
 
 	//	public Designation getDesignation()

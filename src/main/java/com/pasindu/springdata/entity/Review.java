@@ -25,11 +25,11 @@ public class Review
 
 	private LocalDateTime givenDate;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "given_by_id")
 	private Employee givenBy;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "received_by_id")
 	private Employee receivedBy;
 
