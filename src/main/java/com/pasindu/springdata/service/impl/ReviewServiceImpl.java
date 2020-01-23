@@ -31,12 +31,12 @@ public class ReviewServiceImpl implements ReviewService
 	@Override
 	public List<Review> findByReceivedBy( long empId )
 	{
-		return reviewRepository.findByReceivedBy( new Employee( empId ) );
+		return reviewRepository.findByReceivedBy( empId );
 	}
 
 	@Override
 	public List<Review> findByGivenBy( long empId )
 	{
-		return reviewRepository.findByGivenBy( new Employee( empId ) );
+		return reviewRepository.findByGivenBy( empId );
 	}
 }

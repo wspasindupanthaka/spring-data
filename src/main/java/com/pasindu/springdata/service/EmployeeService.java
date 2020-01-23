@@ -15,6 +15,8 @@ public interface EmployeeService
 {
 	Employee save( Employee employee );
 
+	Employee edit( Employee employee );
+
 	List<Employee> findByName( String name );
 
 	Employee findById( long id );

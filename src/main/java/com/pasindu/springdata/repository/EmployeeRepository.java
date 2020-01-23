@@ -12,10 +12,12 @@ import java.util.List;
  * @on 2020-01-02
  * @at 12:56 PM
  */
-@Repository
-public interface EmployeeRepository extends JpaRepository<Employee, Long>
+
+public interface EmployeeRepository
 {
 	List<Employee> findEmployeeByName( String name );
 
 	Employee findById( long id );
+
+	Employee save( Employee employee );
 }

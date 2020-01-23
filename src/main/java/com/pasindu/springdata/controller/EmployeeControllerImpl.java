@@ -28,6 +28,14 @@ public class EmployeeControllerImpl implements EmployeeController
 	}
 
 	@Override
+	public Employee edit( @RequestBody Employee employee )
+	{
+		Employee editedEmployee = employeeService.edit( employee );
+		return editedEmployee;
+	}
+
+
+	@Override
 	public Employee findById( @PathVariable(value = "id") long id )
 	{
 		Employee findByIdIdEmployee = employeeService.findById( id );

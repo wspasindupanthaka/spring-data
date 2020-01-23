@@ -99,23 +99,4 @@ public class Employee
 		this.participatingEvents = participatingEvents;
 	}
 
-	//	public Designation getDesignation()
-	//	{
-	//		return designation;
-	//	}
-	//
-	//	public void setDesignation( Designation designation )
-	//	{
-	//		this.designation = designation;
-	//	}
-	//
-	//	public List<Event> getEvents()
-	//	{
-	//		return events;
-	//	}
-	//
-	//	public void setEvents( List<Event> events )
-	//	{
-	//		this.events = events;
-	//	}
 }

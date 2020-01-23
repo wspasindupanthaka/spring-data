@@ -14,9 +14,11 @@ import java.util.List;
  * @at 4:26 PM
  */
 @Repository
-public interface ReviewRepository extends JpaRepository<Review, Long>
+public interface ReviewRepository
 {
-	List<Review> findByReceivedBy( Employee empId );
+	List<Review> findByReceivedBy( long empId );
 
-	List<Review> findByGivenBy( Employee empId );
+	List<Review> findByGivenBy( long empId );
+
+	Review save( Review review );
 }

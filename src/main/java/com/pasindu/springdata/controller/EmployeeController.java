@@ -14,6 +14,9 @@ public interface EmployeeController
 	@RequestMapping(value = "", method = RequestMethod.POST)
 	public Employee save( @RequestBody Employee employee );
 
+	@RequestMapping(value = "", method = RequestMethod.PUT)
+	public Employee edit( @RequestBody Employee employee );
+
 	@RequestMapping(value = "/from-id/{id}", method = RequestMethod.GET)
 	public Employee findById( @PathVariable(value = "id") long id );
 
