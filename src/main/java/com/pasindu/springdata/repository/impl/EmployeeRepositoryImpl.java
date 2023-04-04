@@ -3,13 +3,11 @@ package com.pasindu.springdata.repository.impl;
 import com.pasindu.springdata.entity.Employee;
 import com.pasindu.springdata.repository.EmployeeRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
-import javax.xml.ws.ServiceMode;
-import java.awt.print.Book;
+
 import java.util.List;
 
 @Repository

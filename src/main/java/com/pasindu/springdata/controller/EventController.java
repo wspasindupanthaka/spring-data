@@ -11,9 +11,6 @@ import java.util.List;
 @RequestMapping("/event")
 public interface EventController
 {
-	@RequestMapping(value = "", method = RequestMethod.POST)
-	Event save( @RequestBody Event event );
-
 	@RequestMapping(value = "/from-name/{name}", method = RequestMethod.GET)
 	List<Event> findByName( @PathVariable(value = "name") String name);
 }

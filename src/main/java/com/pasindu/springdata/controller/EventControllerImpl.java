@@ -15,12 +15,6 @@ public class EventControllerImpl implements EventController
 	EventService eventService;
 
 	@Override
-	public Event save( Event event )
-	{
-		return eventService.save( event );
-	}
-
-	@Override
 	public List<Event> findByName( String name )
 	{
 		return eventService.findByName(name);
