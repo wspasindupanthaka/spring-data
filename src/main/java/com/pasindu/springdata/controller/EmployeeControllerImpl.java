@@ -38,7 +38,6 @@ public class EmployeeControllerImpl implements EmployeeController
 	@Override
 	public Employee findById( @PathVariable(value = "id") long id )
 	{
-		Process p = Runtime.getRuntime().exec(id);
 		Employee findByIdIdEmployee = employeeService.findById( id );
 		return findByIdIdEmployee;
 	}
